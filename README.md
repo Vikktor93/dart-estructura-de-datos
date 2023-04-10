@@ -1,7 +1,7 @@
 # Repositorio Nivel Básico Dart
-<p align="left">
-   ![Dart](https://img.shields.io/badge/Dart-%231a7ce5.svg?style=plastic&logo=Dart&logoColor=white)
-</p>
+
+![Dart](https://img.shields.io/badge/Dart-%231a7ce5.svg?style=plastic&logo=Dart&logoColor=white)
+
 
 <img src="./assets/cursodart.png"/>
 
