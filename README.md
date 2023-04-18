@@ -15,6 +15,8 @@ Con ejemplos de diferentes algoritmos, el aprendizaje será mas fácil aún.
 
 En una segunda etapa se explicará la sección de Estructura de Datos utilizando Dart.
 
+Se irá actualizando el contenido de este repositorio durante el primer semestre de este año 2023.
+
 ## Enlaces de Interés
 
 - Web oficial de Dart [(Instalacion Dart)][dart]
