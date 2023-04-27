@@ -1,4 +1,5 @@
-//GUIA RAPIDA DE VARIABLES EN DART
+//GUIA RÁPIDA TIPOS DE DATOS EN PYTHON
+//Docente: Victor Saldivia Vera - Institución: Universidad de Los Lagos
 void main() {
   //Este es un comentario de una linea
 
@@ -26,7 +27,6 @@ void main() {
   //02-DECLARANDO VARIABLES DE TIPO NÚMERICAS
 
   //ENTEROS
-
   int a = 30;
   int b = 20;
   int n = 100;
@@ -55,8 +55,11 @@ void main() {
 
   //04-BOOLEANS
   bool ampolleta = false;
+  bool interruptor = true;
+
   print("04-BOOLEANS");
-  print("$ampolleta\n");
+  print("La ampolleta esta apagada: $ampolleta");
+  print("El interruptor esta encendido: $interruptor\n");
 
   //05-VARIABLES TIPO VAR - ( Si no sabemos el tipo de datos a tratar se puede utilizar Var (No recomendado) )
   var dato = "Esto es un dato";
@@ -64,10 +67,18 @@ void main() {
   print("$dato\n");
 
   //06-LISTAS
-  //Por defecto las listas son de tipo dynamic
-  List numeros = [1, 2, 3, 4, 5];
+  //Hay varias maneras de declarar las listas
   print("06-LISTAS");
+  var lista = [0, 1, 2, 3, 4]; //utilizando los corchetes
+  print(lista.runtimeType);
+  List numeros = [1, 2, 3, 4, 5]; //ocupando la clase List
+  print(numeros.elementAt(4));
   print("Esta es una lista conformada por los siguientes elementos:  $numeros");
+
+  List<dynamic> datos = [0, "Pepe", true];
+  print(datos.runtimeType);
+  // Accediendo a un elemento en especifico de la lista
+  print(numeros[0]);
 
   // Agregando un nuevo elemento a la lista (Númerico)
   numeros.add(6);
@@ -77,38 +88,47 @@ void main() {
   numeros.add("Casa");
   print("Lista actualizada con el último elemento agregado: $numeros");
 
+  //Eliminando un elemento en especifico de la lista
+  numeros.removeAt(6);
+  print("Lista actualizada $numeros");
+
+  //Eliminando el ultimo elemento de la lista
+  numeros.removeLast();
+  print("Lista con el último elemento ya eliminado $numeros");
+
   //Restringiendo el tipo de variables a la Lista
-  List<int> nuevoarray = [1, 2, 3, 4, 5];
+  List<int> nuevoarray = [10, 20, 30, 40, 50];
   print(
       "Nueva lista con restricción de solo elementos númericos: $nuevoarray\n");
 
-  //No debería permitir agregar este elemento a la lista
+  //¿Puedo agregar este nuevo elemento a la lista?
   //nuevoarray.add("Hola");
   //print(nuevoarray);
 
   //07-VARIABLES TIPO DYNAMIC
   /*Estas variables pueden tomar cualquier tipo de dato y cambiarlo a otro tipo en todo momento*/
-  dynamic valor = 12;
 
   print("07-DYNAMIC");
+
+  dynamic valor = 12;
   print("Variable dinamica: $valor");
 
-  valor = "Cadena de texto";
-  print("Variable dinamica: $valor");
-
-  valor = 3.1416;
+  valor = "Soy un String";
   print("Variable dinamica: $valor");
 
   valor = true;
-  print("Variable dinamica: $valor\n");
+  print("Variable dinamica: $valor");
+  print(valor.runtimeType);
 
   //08-COLOCANDO EN DUDA LA MUTABILIDAD DE FINAL
   //Ejemplo de la declaración de un Array
-  final z = [1, 2, 3, 4];
-  print("08-COLOCANDO EN DUDA LA MUTABILIDAD DE FINAL");
-  print(z); //imprime el array [1,2,3,4] , valor asignado inicialmente.
-  z.add(5); //Hacemos uso del método para agregar valor al array
-  print(z);
+  print("\n08-COLOCANDO EN DUDA LA MUTABILIDAD DE FINAL");
+
+  final listanumeros = [1, 2, 3, 4];
+
+  print(listanumeros);
+  listanumeros.add(5); //Hacemos uso del método para agregar valor al array
+  print(listanumeros);
 
   //Ahora probabamos la mutabilidad de Const
   //const date = new DateTime.now();
