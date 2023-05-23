@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main() {
   print("############ 01-LISTAS NÚMERICAS ###########");
   List<int> enteros = [];
@@ -32,4 +34,9 @@ void main() {
   print(nombres.last); //consultando el último elemento
   print(nombres.first);
   print(nombres[nombres.length - 1]); //¿funcionará este código?
+
+  List<int> numeros = [4, 7, 2, 9, 1];
+  int maximo = numeros.reduce(max);
+  int minimo = numeros.reduce(min);
+  print("El máximo es $maximo y el mínimo es $minimo");
 }
